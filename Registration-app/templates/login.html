@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+{% if message  %}
+    <div class="alert alert-secondary" role="alert">
+         <p>{{ message }}</p>
+    </div>
+{% endif %}
+
+<form action="" method="post">
+    <div class="login-form">
+    <div class="form-group">
+        <label for="InputEmail">Email address</label>
+        {% if email %}
+        <input name="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email" value={{email}}>
+        {% else %}
+        <input name="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+        {% endif %}
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group pass">
+        <label for="InputPassword">Password</label>
+        <input type="password" name="password" class="form-control" id="InputPassword" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-primary submit-button">Submit</button>
+    </div>
+</form>
+{% endblock %}
+

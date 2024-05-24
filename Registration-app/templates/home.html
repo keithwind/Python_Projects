@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+<div class="mainGrid">
+    <div class="imageGrid">
+        <img src="/static/pic.png" width="40%">
+    </div>
+    <div class="welcomeGrid">
+        <span class="textSpan">Let's make a difference</span>
+        <div class="buttonsFlex">
+            <a href="/register">
+                <button class="roundButton">
+                    Register
+                </button>
+            </a>
+            <a href="/login">
+                <button class="roundButton">
+                    Login
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
